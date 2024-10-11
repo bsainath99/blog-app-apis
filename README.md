@@ -18,6 +18,28 @@ This project is a RESTful API for a blogging application with different profiles
 - **Spring Security**: For securing API endpoints and handling user authentication.
 - **Postman**: Tool for testing the API endpoints.
 
+## API Reference
+
+#### POST Section API ENDPOINTS 
+
+```http
+  Endpoints of all Posts Section
+```
+
+| Method     | End point | Request Body | Description |
+| :-------- | :------- | :--------------| :------------------------- |
+| POST | /api/posts/user/{userId}/category/{categoryId}/posts	  | UserID, CategoryID | Create a new post under a user and category  |
+| GET | /api/posts/user/{userId}/posts  | UserID | Get all posts by a specific user  |
+| GET | /api/posts/category/{categoryId}/posts  | CategoryID | Get all posts in a specific category  |
+| GET | /api/posts/allPosts  | N/A | Get all posts  |
+| GET |/api/posts/post/{postId}  | PostID | Get a post by its ID  |
+| DELETE | /api/posts/delete/{postId}  | PostID | Delete a post by its ID  |
+| PUT | /api/posts/update/{postId}  | PostID | Update a post by its ID  |
+| GET | /api/posts/search/{keywords}  | String |Search for posts by title keywords  |
+| POST | 	/api/posts/post/image/upload/{postId}  | MultipartFile (image) | Upload an image for a post  |
+| GET | /api/posts/post/image/{imageName}  | imageName |	Download a post's image by filename |
+
+
 ## Getting Started
 
 ### Prerequisites
@@ -37,13 +59,7 @@ This project is a RESTful API for a blogging application with different profiles
 4. Run the application:
   mvn spring-boot:run
 
-API Endpoints
-Endpoint	Method	Description
-/api/posts	GET	Retrieve all blog posts
-/api/posts/{id}	GET	Retrieve a specific blog post
-/api/posts	POST	Create a new blog post
-/api/posts/{id}	PUT	Update an existing blog post
-/api/posts/{id}	DELETE	Delete a blog post
+
 
 
 Testing
