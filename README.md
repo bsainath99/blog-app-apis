@@ -20,11 +20,18 @@ This project is a RESTful API for a blogging application with different profiles
 
 ## API Reference
 
-#### POST Section API ENDPOINTS 
+### Category Section API Endpoints
 
-```http
-  Endpoints of all Posts Section
-```
+| HTTP Method | Endpoint                    | Description                                      | Request Body Type        |
+|-------------|-----------------------------|--------------------------------------------------|--------------------------|
+| POST        | `/api/categories/create`    | Create a new category.                          | `CategoryDTO` (JSON)     |
+| PUT         | `/api/categories/update/{catId}` | Update an existing category by ID.               | `CategoryDTO` (JSON)     |
+| DELETE      | `/api/categories/delete/{catId}` | Delete a category by ID.                        | categoryID                   |
+| GET         | `/api/categories/get/{catId}`    | Retrieve a category by ID.                      | categoryID                     |
+| GET         | `/api/categories/getAll`         | Retrieve all categories.                        | None                     |
+
+
+### POST Section API ENDPOINTS 
 
 | Method     | End point | Request Body | Description |
 | :-------- | :------- | :--------------| :------------------------- |
