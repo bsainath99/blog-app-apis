@@ -5,7 +5,7 @@ This project is a RESTful API for a blogging application with different profiles
 
 ## Features
 
-- **CRUD Operations**: Create, Read, Update, and Delete operations for each section like #USERS,CATEGORIES,POSTS,COMMENTS.
+- **CRUD Operations**: Create, Read, Update, and Delete operations for each section like **USERS,CATEGORIES,POSTS,COMMENTS**.
 - **User Authentication**: Secure endpoints with JWT-based authentication.
 - **MySQL Database**: Uses MySQL for data storage, with Spring Data JPA for ORM.
 - **Swagger Documentation**: Automatically generated API documentation for easier testing and exploration.
