@@ -20,7 +20,7 @@ This project is a RESTful API for a blogging application with different profiles
 
 ## API Reference
 
-### Category Section API Endpoints
+### CATEGORY Section API Endpoints
 
 | HTTP Method | Endpoint                    | Description                                      | Request Body Type        |
 |-------------|-----------------------------|--------------------------------------------------|--------------------------|
@@ -30,6 +30,12 @@ This project is a RESTful API for a blogging application with different profiles
 | GET         | `/api/categories/get/{catId}`    | Retrieve a category by ID.                      | categoryID                     |
 | GET         | `/api/categories/getAll`         | Retrieve all categories.                        | None                     |
 
+### COMMENT Section API Endpoints
+
+| HTTP Method | Endpoint                           | Description                               | Request Body Type        |
+|-------------|------------------------------------|-------------------------------------------|--------------------------|
+| POST        | `/api/post/{postId}/comments`     | Create a new comment for a specific post. | `CommentDTO` (JSON)     |
+| DELETE      | `/api/comments/delete/{commentId}` | Delete a comment by ID.                  | commentId                     |
 
 ### POST Section API ENDPOINTS 
 
@@ -45,6 +51,15 @@ This project is a RESTful API for a blogging application with different profiles
 | GET | /api/posts/search/{keywords}  | String |Search for posts by title keywords  |
 | POST | 	/api/posts/post/image/upload/{postId}  | MultipartFile (image) | Upload an image for a post  |
 | GET | /api/posts/post/image/{imageName}  | imageName |	Download a post's image by filename |
+### USER Section API ENDPOINTS 
+
+| HTTP Method | Endpoint                     | Description                               | Request Body Type        |
+|-------------|------------------------------|-------------------------------------------|--------------------------|
+| POST        | `/api/users/addUser`         | Create a new user.                       | `UserDTO` (JSON)        |
+| PUT         | `/api/users/updateUser/{userId}` | Update an existing user by ID.           | `UserDTO` (JSON)        |
+| DELETE      | `/api/users/delete/{userId}`  | Delete a user by ID.                     | userId                     |
+| GET         | `/api/users/allUsers`         | Retrieve all users.                      | None                     |
+| GET         | `/api/users/user/{userId}`    | Retrieve a user by ID.                   | userId                     |
 
 
 ## Getting Started
